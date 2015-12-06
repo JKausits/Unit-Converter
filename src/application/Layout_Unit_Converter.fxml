@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="550.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConverterController">
+   <children>
+      <HBox layoutX="18.0" layoutY="25.0" prefHeight="100.0" prefWidth="515.0">
+         <children>
+            <VBox prefHeight="86.0" prefWidth="100.0">
+               <children>
+                  <RadioButton fx:id="lengthChoice" mnemonicParsing="false" onAction="#lengthSelected" text="Length">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="unitType" />
+                     </toggleGroup>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="weightChoice" mnemonicParsing="false" onAction="#weightSelected" text="Weight" toggleGroup="$unitType">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="tempChoice" mnemonicParsing="false" onAction="#tempSelected" text="Temp" toggleGroup="$unitType">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </VBox>
+            <VBox prefHeight="100.0" prefWidth="153.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="153.0">
+                     <children>
+                        <Label text="From">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="fromUnit" prefHeight="26.0" prefWidth="110.0">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="fromValue">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchUnits" prefWidth="75.0" text="Switch">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="convertButton" mnemonicParsing="false" onAction="#convertValues" prefWidth="75.0" text="Convert">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox prefHeight="85.0" prefWidth="150.0">
+               <children>
+                  <HBox prefHeight="27.0" prefWidth="130.0">
+                     <children>
+                        <Label text="To">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="toUnit" prefHeight="26.0" prefWidth="110.0">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="toValue">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
